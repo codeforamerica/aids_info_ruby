@@ -3,7 +3,7 @@ require File.expand_path('../lib/aids_info/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.name        = 'aids_info'
-  gem.version     = EPA::VERSION
+  gem.version     = AidsInfo::VERSION
   gem.author      = "Code for America"
   gem.email       = 'info@codeforamerica.org'
   gem.homepage    = ''
