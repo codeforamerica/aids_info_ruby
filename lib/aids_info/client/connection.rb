@@ -6,7 +6,7 @@ module AidsInfo
       private
 
       def connection
-        Faraday.new(:url => 'http://aidsinfo.nlm.nih.gov/') do |connection|
+        Faraday.new(:url => 'http://aidsinfo.nih.gov') do |connection|
           connection.use Faraday::Request::UrlEncoded
           connection.use Faraday::Response::RaiseError
           connection.use Faraday::Response::Rashify
