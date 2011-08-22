@@ -1,15 +1,15 @@
 module AidsInfo
   class Client
     module Request
-      def get(path, options={})
-        request(:get, path, options)
+      def get(path)
+        request(:get, path)
       end
 
       private
 
-      def request(method, path, options)
+      def request(method, path)
         response = connection.send(method) do |request|
-          request.url(path, options)
+          request.url(path)
         end
         response.body
       end

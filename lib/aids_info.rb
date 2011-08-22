@@ -1,9 +1,9 @@
 require 'aids_info/client'
 
 module AidsInfo
-  
-  def self.client(options={})
-      AidsInfo::Client.new(options)
+
+  def self.client
+      AidsInfo::Client.new
     end
 
     def self.method_missing(method, *args, &block)
@@ -14,5 +14,5 @@ module AidsInfo
     def self.respond_to?(method, include_private=false)
       client.respond_to?(method, include_private) || super(method, include_private)
     end
-    
+
 end
